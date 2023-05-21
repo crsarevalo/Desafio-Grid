@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  font-family: "Oswald";
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "nav nav"
+    "aside main"
+    "footer footer";
+  height: 100vh;
+  grid-template-columns: 20% auto;
+  grid-template-rows: 10% auto 10%;
+}
+nav {
+  font-weight: 400;
+  grid-area: nav;
+  display: grid;
+  justify-content: center;
+  background-color: #66a5ad;
+}
+
+.Contenedor-aside {
+  font-weight: 300;
+  grid-area: aside;
+  padding: 2rem 0 0 1rem;
+  min-width:fit-content;
+  background-color: #c4dfe6;
+}
+
+.Contenedor-aside ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style-type: none;
+  padding: 2rem 2rem 0 2rem;
+}
+
+.Card img {
+  background-color: white;
+  height: 15rem;
+  width: 15rem; 
+  padding: 0.35rem;
+  border: black 1px solid;
+}
+
+.Card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+.precio {
+  padding-bottom: 1rem;
+}
+.nombre {
+  padding-top: 0.5rem;
+  font-weight: 800;
+}
+
+button {
+  font-weight: 500;
+  font-size:medium;
+  border: none;
+  width: 15rem;
+  background-color: #66a5ad;
+}
+button:hover{
+  background-color: #7bd0db;
+  cursor: pointer;
+}
+main {
+  grid-area: main;
+  background-color: #d4ecf17a;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 1rem;
+  background-color: #d7dce6;
+}
